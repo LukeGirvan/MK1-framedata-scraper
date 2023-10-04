@@ -11,6 +11,8 @@ this it to dynamically change the link to get other characters data without havi
 -Data Formatting: The scraped data is structured as an array of arrays, where each sub-array contains the button notation and an associated object with frame data.
 
 -Saving as JSON: The script converts the structured data into a JSON object and saves it as a JSON file with a filename based on the character's name.
+![image](https://github.com/LukeGirvan/MK1-framedata-scraper/assets/126108451/5e0a0bd1-252e-4361-93e5-94d734a2f434)
+
 
 ## Usage
 Run the script in your terminal using Node.js.
