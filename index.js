@@ -36,12 +36,6 @@ const fs = require('fs');
       const row = await page.waitForSelector(
         `#post-142 > div > div > div.move-list-wrapper > div.move-list-table > div > div.${selectorPrefix} > div.move-list-table-body > div:nth-child(${i})`
       );
-  
-      const text = await row.$eval('div:nth-child(1)', (node) =>
-        node.textContent.trim()
-      );
-      const name = text.trim();
-  
       let button = await row.$eval('div:nth-child(2)', (node) =>
         node.textContent.replace('+', '').replace(',', '')
       );
@@ -94,19 +88,3 @@ const fs = require('fs');
   console.log(havik);
  
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
