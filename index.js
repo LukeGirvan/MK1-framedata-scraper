@@ -5,16 +5,16 @@ const fs = require('fs');
 (async () => {
   
   // Create a readline interface to get user input
-  const rl = readline.createInterface({
+  const askUserCharName = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   });
 
   // Prompt the user for the character name
-  rl.question('enter char name use - and not spaces: ', async (charname) => {
+  askUserCharName.question('enter char name use - and not spaces: ', async (charname) => {
     
     // Close the readline interface as we have the input we need
-    rl.close();
+    askUserCharName.close();
 
     // Launch the Puppeteer browser
     const browser = await puppeteer.launch({
@@ -39,8 +39,7 @@ const fs = require('fs');
     await page.waitForSelector('#post-142 > div > div > div.move-list-select-view > span:nth-child(3)');
 
     const arr = []; // Array to store scraped data
-    const textArray = []; // Unused array for text data (you can remove it if not needed)
-
+    
     // Function to scrape data from the webpage
     async function scrapeData(page, selectorPrefix, textArray, arr) {
       for (let i = 1; i < 100; i++) {
